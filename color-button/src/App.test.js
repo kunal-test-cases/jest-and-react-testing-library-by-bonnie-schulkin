@@ -3,6 +3,7 @@ import App from "./App";
 import { logRoles } from "@testing-library/dom";
 
 test("button has correct initial color, and updates when clicked.", () => {
+  const a = 10;
   const { container } = render(<App />);
   logRoles(container);
 
@@ -21,6 +22,7 @@ test("button has correct initial color, and updates when clicked.", () => {
 
   // expect the button text to be 'Change to red'
   expect(colorButton).toHaveTextContent("Change to red");
+  expect(colorButton.textContent).toBe("Change to red");
 });
 
 test("initial conditions", () => {
